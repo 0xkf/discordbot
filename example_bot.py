@@ -50,7 +50,7 @@ async def on_message(message):
         # print(index.query(message.content))
         await message.channel.send('Hello!')
 
-    if message.content.startswith('$chat'):
+    if message.content.startswith('$coffin'):
         # print(message.content)
         print(index.query(message.content))
         await message.channel.send(index.query(message.content))
