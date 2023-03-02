@@ -12,6 +12,7 @@ load_dotenv()
 MYAPI = os.getenv('MYAPI')
 # THEURL = os.getenv('THEURL')
 QUESTION1 = os.getenv('QUESTION1')
+DISCORDTOKEN = os.getenv('DISCORDTOKEN')
 
 os.environ["OPENAI_API_KEY"] = MYAPI
 json_path = "./data/wiki.json"
@@ -34,7 +35,7 @@ client = discord.Client(intents=intents)
 # discordと接続した時に呼ばれる
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
+    print('We have logged in as {client.user}')
 
 # メッセージを受信した時に呼ばれる
 @client.event
@@ -56,11 +57,32 @@ async def on_message(message):
         # await message.channel.send("message")
         # await message.channel.send('Hello!')
         return
-    
-    
 
     else:
         return
 
 # クライアントの実行
-client.run('MTA4MDM1MTUwNTY2OTk1NTY3NA.GyrMgi.W1VclzgqnWnc26M6L9Ml7Wq93RVi-U3PCIdP-w')
+client.run(DISCORDTOKEN)
+
+
+
+
+
+# import discord
+# import os
+
+# client = discord.Client()
+
+# @client.event
+# async def on_ready():
+#     print('We have logged in as {0.user}'.format(client))
+
+# @client.event
+# async def on_message(message):
+#     if message.author == client.user:
+#         return
+
+#     if message.content.startswith('$hello'):
+#         await message.channel.send('Hello!')
+
+# client.run(os.getenv(''))
