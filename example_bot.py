@@ -1,9 +1,5 @@
 import discord
 
-
-
-
-
 import os
 from gpt_index import GPTSimpleVectorIndex
 from dotenv import load_dotenv
@@ -19,10 +15,8 @@ json_path = "./data/wiki.json"
  
 index = GPTSimpleVectorIndex.load_from_disk(json_path)
  
-
 # print(index.query("聖書の内容を要約してください。？"))
 # print(index.query(QUESTION1))
-
 
 
 # インテントの生成
@@ -48,7 +42,7 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         # print(message.content)
         # print(index.query(message.content))
-        await message.channel.send('Hello!')
+        await message.channel.send('Hello! I am coffin. Thank you for calling me!')
 
     if message.content.startswith('$coffin'):
         # print(message.content)
@@ -63,26 +57,3 @@ async def on_message(message):
 
 # クライアントの実行
 client.run(DISCORDTOKEN)
-
-
-
-
-
-# import discord
-# import os
-
-# client = discord.Client()
-
-# @client.event
-# async def on_ready():
-#     print('We have logged in as {0.user}'.format(client))
-
-# @client.event
-# async def on_message(message):
-#     if message.author == client.user:
-#         return
-
-#     if message.content.startswith('$hello'):
-#         await message.channel.send('Hello!')
-
-# client.run(os.getenv(''))
