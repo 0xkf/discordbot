@@ -7,28 +7,24 @@ discord内で、chatGPTのように対話できるbotを作成しました。
 
 ```javascript
 必要なパッケージをインストール
-
 pip install gpt_index
 
-
 envファイルの設定
-env.exampleをコピーして、.envファイルとし、下記の変数に適切な情報を入力していきます。
-MYAPI,THEURL,QUESTION1,(DISCORDTOKEN)etc.....
+cp env.example
 
 
-指定したurlのページを学習させる
+指定したurlのページを学習させる (ここでは、OpenAIのapikeyと、指定したいwebsiteのurlを.env常に設定することができます。)
 python save.py
-ここでは、OpenAIのapikeyと、指定したいwebsiteのurlを.env常に設定することができます。
 
 
-自分の指定した質問をする
+
+自分の指定した質問をする(ここで、QUESTION変数をいじることで、プロンプトの会話内容をターミナルで試すことができます。)
 python load.py
-ここで、QUESTION変数をいじることで、プロンプトの会話内容をターミナルで試すことができます。
 
 
-discordに、botを招待。
+
+discordに、botを招待。(developerpageにて、discordbotのAPIを取得して、下記コマンドを実行可能にします。)
 参考　：https://note.com/npaka/n/n2ea2a6dda0e5
-developerpageにて、discordbotのAPIを取得して、下記コマンドを実行可能にします。
 
 
 botを起動
