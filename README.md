@@ -1,9 +1,9 @@
- # gptindexを用いて、Webサイトの情報のembeddingを行える　discord-chatbotの作成
+ # # discord内で、chatGPTと会話できるchatbotを作ってみました。
+ gptindexを用いて、ご自身で扱っているWebサイト等の情報を学習させることで、自分たちならではのbotを作ることができます。 
 
-discord内で、chatGPTのように対話できるbotを作成しました。
 
 最近、chatGPTが流行っていますが、直近のデータや専門的な情報は、学習されていません。
-そこで、それぞれのdiscordにて、学習させたい専門的な、情報を学習させられるように、GPTindexを用いてカスタマイズしました。
+そこで、それぞれのdiscordにて、学習させたい専門的な、情報を学習させられるように、GPTindexを用いてカスタマイズできるものを公開しました。
 
 ```javascript
 必要なパッケージをインストール
